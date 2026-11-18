@@ -1,4 +1,4 @@
-# PubMed Chat
+# GBM Network Chat
 
 A chat-only web app for exploring biomedical literature. Ask in plain English; an LLM decides which of two tools to call:
 
