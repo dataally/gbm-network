@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PubMed Chat</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=v) }}">
+</head>
+<body>
+<main>
+  <header>
+    <h1>PubMed Chat</h1>
+    <p class="meta">Ask in plain English. I can search PubMed (with citation counts) and check the STRING database for gene pairs.</p>
+  </header>
+  <div id="chatlog" aria-live="polite">
+    <div id="examples">
+      <button type="button" class="chip-btn">Papers on KRAS and TP53 in pancreatic cancer since 2020</button>
+      <button type="button" class="chip-btn">Is KRAS–TP53 in STRING, and is there literature on the pair?</button>
+      <button type="button" class="chip-btn">Strict literature for BRCA1 and PARP1, sorted by citations per year</button>
+    </div>
+  </div>
+  <form id="chatform">
+    <input id="chatinput" placeholder="Ask about papers or a gene pair…" autocomplete="off" autofocus>
+    <button type="submit" id="chatsend">Send</button>
+    <button type="button" id="chatclear" class="secondary">Clear</button>
+  </form>
+  <div class="meta foot">Answers use only tool results and the abstracts shown; PubMed has no full text.</div>
+</main>
+<script src="{{ url_for('static', filename='app.js', v=v) }}"></script>
+</body>
+</html>
